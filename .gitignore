@@ -1,0 +1,12 @@
+log.html
+report.html
+output.xml
+*.log
+.venv/
+results/
+*selenium-screenshot*.png
+
+todomvc/.DS_Store
+todomvc/node_modules
+todomvc/.angular/
+todomvc/dist/

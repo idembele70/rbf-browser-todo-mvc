@@ -1,0 +1,35 @@
+[tool.robocop]
+exclude = ["deprecated.robot"]
+include = ["custom.txt"]
+language = ["en", "pl"]
+
+[tool.robocop.lint]
+select = [
+    "rulename",
+    "ruleid"
+]
+extend-select = [
+    "additional-rule"
+]
+ignore = [
+    "ruleid"
+]
+reports = ["all", "sarif"]
+persistent = true
+compare = true
+configure = [
+    "line-too-long.line_length=110"
+]
+
+[tool.robocop.format]
+select = ["NormalizeNewLines"]
+extend-select = ["CustomFormatter.py"]
+configure = [
+    "NormalizeNewLines.section_lines=1"
+]
+diff = true
+line_length = 110
+skip = [
+    "documentation"
+]
+reruns = 3
